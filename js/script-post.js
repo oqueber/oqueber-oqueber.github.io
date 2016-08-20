@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
      $(".imagenPresentacion").css({"height":$(window).height()-$(".header").height()+"px"});
 
      $(".down").click(function(){

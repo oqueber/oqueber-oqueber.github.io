@@ -3,6 +3,18 @@ layout: default
 title: Sobre mi
 description: Pequeña descripcion sobre quien soy.
 ---
+<script type="text/javascript">
+     $("#sobreMi").click(function(){
+       event.preventDefault(); // para FF standard
+       event.returnValue=false; // Para IE
+
+          $("body,html").animate({
+               scrollTop: $(".imagenPresentacion").height() + $(".header").height()+"px"
+          },300);
+          
+       return false;
+     });
+</script>
 {% include portafolio/header-portafolio.html %}
 {% include portafolio/timeline-portafolio.html %}
 {% include portafolio/trabajos-portafolio.html %}
