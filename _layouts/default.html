@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+     <!-- Links agregados por mi -->
+    <meta itemprop="description" name="description" content="{% if page.desc %}{{ page.desc | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato|Montserrat|Average' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+
+    <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+</head>
+
+<body>
+{% include htmlBase/header.html %}
+<div class="ir-arriba"><span class="fa fa-rocket "></span></div>
+
+    <div id="main" role="main">
+      {{ content }}
+    </div>
+
+{% include htmlBase/footer.html %}
+     <script type="text/javascript" src="{{ site.baseurl }}/js/script-post.js"></script>
+     <script id="dsq-count-scr" src="//oquebernavarro-github-com.disqus.com/count.js" async></script>
+    {% include analytics.html %}
+  </body>
+</html>

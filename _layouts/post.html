@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<section style="background:url('{{ page.img }}');background-attachment: fixed;
+    background-size: cover;
+    background-position: center 53%;
+    background-repeat: no-repeat;"class="imagenPresentacion" id="on-post-img">
+</section>
+<section class="on-main-post">
+     <div class="row center-xs">
+          <div class="on-content col-xs-12 col-sm-8 col-md-7">
+               <div class="date start-xs">
+                 Written on {{ page.date | date: "%B %e, %Y" }}
+               </div>
+
+               {% if page.adsenseQuitar != 0 %}
+                    {% include adsense-post.html %}
+               {% endif %}
+
+               <h1 class="title-home title-post">{{ page.title }}</h1>
+               <div style="text-align:left" class="text-blog">
+                    {{ content }}
+               </div>
+
+
+               {% include  compartir.html %}
+
+               {% include  postrelacionados.html %}
+
+               <div style="margin-top:50px;"class="comments">
+                 {% include disqus.html %}
+               </div>
+          </div>
+     </div>
+</section>

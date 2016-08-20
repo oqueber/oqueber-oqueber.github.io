@@ -1,0 +1,332 @@
+*{
+     padding: 0;
+     margin: 0;
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+     font-family: 'Lato', sans-serif;
+     font-weight: 300;
+     text-decoration: none;
+     color:black;
+}
+header{
+     background: #393f4c;
+     width: 100%;
+     z-index: 2;
+}
+
+.header{
+     max-width: 80%;
+     margin: 0 auto;
+     z-index: 99;
+}
+.header .logo{
+     padding: 10px 0;
+}
+.header .menu a p,
+.header .logo a h2{color:white; font-weight: 300;}
+
+.header .menu a{
+     padding: 20px 10px;
+     display: inline-block;
+}
+.header .menu a:hover{
+     padding-bottom: 16px;
+     border-bottom: 4px solid orange;
+}
+
+/*----------------------------------------------------------------
+----            header-portafolio, about y hobbits
+-----------------------------------------------------------------*/
+.header-portafolio .contenedorPresentacion,
+.header-portafolio .contenedorPresentacion .row,
+.header-portafolio .contenidoPresentacion,
+.header-portafolio{
+     width: 100%;
+     margin: 0;
+     padding: 0;
+     background: #fafafa;
+}
+
+.header-portafolio .imagenPresentacion{
+     background: url("../img/aboutme.jpg");
+     width: 100%;
+     -webkit-background-attachment: fixed;
+     -moz-background-attachment: fixed;
+     background-attachment: fixed;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+}
+.title-home {
+    font-size: 4em;
+    font-weight: 300;
+    border-bottom: 3px solid #545454;
+    max-width: 320px;
+    margin: 0 auto;
+}
+.header-portafolio .contenedorPresentacion .contenidoPresentacion h1{
+     margin-top: 30px;
+     margin-bottom: 30px;
+     line-height: 1.313em;
+     color: #545454;
+}
+.header-portafolio .contenedorPresentacion .contenidoPresentacion p{
+    text-align: justify;
+    padding: 0 10px;
+    padding-bottom: 50px;
+    font-size: 1.4em;
+    line-height: 1.313em;
+    color: #7d7d7d;
+    font-weight: 300;
+}
+
+.header-portafolio .contenedorPresentacion .contenidoPresentacion .killers{
+     padding-bottom: 100px;
+}
+
+.header-portafolio .contenedorPresentacion .contenidoPresentacion .killers span{
+     width: 100%;
+     display: inline-block;
+     position: relative;
+     padding-bottom: 60px;
+     padding-top: 40px;
+}
+.header-portafolio .contenedorPresentacion .contenidoPresentacion .killers span::before {
+    padding: 20%;
+    background: #212121;
+    font-size: 2em;
+    color: white;
+
+}
+.header-portafolio .contenedorPresentacion .contenidoPresentacion .killers span i {
+     position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    font-weight: 400;
+
+}
+@media only screen and (min-width: 760px) {
+
+     .header-portafolio .contenedorPresentacion .contenidoPresentacion .killers span{
+          padding-bottom: 100px ;
+          padding-top:85px;
+     }
+     .header-portafolio .contenedorPresentacion .contenidoPresentacion .killers span i {
+          font-size: 1.4em;
+     }
+
+
+
+}
+
+/*----------------------------------------------------------------
+----            boton de ir arribat
+-----------------------------------------------------------------*/
+
+
+.ir-arriba{
+     display: none;
+     width: 50px;
+     height: 50px;
+     position: fixed;
+     background: yellow;
+     bottom:20px;
+     right: 20px;
+     cursor: pointer;
+     z-index: 99;
+     border-radius: 50px;
+}
+.ir-arriba span{
+     font-size: 2em;
+    -webkit-transform: rotate(-44deg);
+    -moz-transform: rotate(-44deg);
+    -ms-transform: rotate(-44deg);
+    -o-transform: rotate(-44deg);
+    transform: rotate(-44deg);
+    margin-top: 11px;
+    margin-left: 9px;
+}
+
+/*----------------------------------------------------------------
+----            section of my works
+-----------------------------------------------------------------*/
+.trabajos-portafolio,
+.trabajos-portafolio .row{
+     margin: 0;
+     padding: 0;
+
+}
+.trabajos-portafolio{
+     background-color: orange;
+     text-align: center;
+}
+.trabajos-portafolio h1{
+     padding-top: 30px;
+     margin-bottom: 30px;
+     color: #2f0b4b;
+     border-bottom: 3px solid #2f0b4b;
+}
+
+.trabajos-portafolio .work{
+     width: 100%;
+     display: inline-block;
+     min-height: 200px;
+     text-align: center;
+     padding-top: 30px;
+     font-size: 1.6em;
+     padding-bottom: 50px;
+}
+.trabajos-portafolio .img-work img,
+.trabajos-portafolio .img-work{
+     width: 100%;
+     max-width: 300px;
+     margin: 0 auto;
+}
+/*----------------------------------------------------------------
+----            Botones de new and prev
+-----------------------------------------------------------------*/
+.pagination {
+    text-align: center;
+    padding: 40px 0;
+}
+.pagination a {
+    padding: 10px;
+    background: white;
+}
+.pagination em {
+    padding: 10px;
+    background: yellow;
+}
+.pagination span {
+    padding: 10px;
+    background: white;
+}
+
+
+
+
+
+/*----------------------------------------------------------------
+----            botones para Compartir
+-----------------------------------------------------------------*/
+.share-box{
+     padding: 30px 0;
+}
+
+.share-box a{
+     display: inline-block;
+     color:#fff;
+     font-size: 2em;
+     width: 55px;
+     height: 50px;
+     background: #000;
+     margin: 0;
+     box-shadow:0px 3px 0px #373c3c;
+}
+.share-box a .fa-facebook,
+.share-box a .fa-twitter,
+.share-box a .fa-google-plus,
+.share-box a .fa-pinterest,
+.share-box a .fa-envelope-o,
+.share-box a .fa-linkedin{
+     width: 100%;
+     height: 50px;
+     padding: 10px 0;
+     color: white;
+     text-decoration: none;
+     -webkit-transition:all 500ms ease;
+     -o-transition:all 500ms ease;
+     transition:all 500ms ease
+}
+.share-box a .fa-facebook:hover,
+.share-box a .fa-twitter:hover,
+.share-box a .fa-google-plus:hover,
+.share-box a .fa-pinterest:hover,
+.share-box a .fa-envelope-o:hover,
+.share-box a .fa-linkedin:hover{
+     box-shadow:0px 0px 0px;
+	padding-top:7px;
+}
+
+.share-box a .fa-facebook {background:#3b5998; } /* Establecemos los colores de cada red social, aprovechando su class */
+.share-box a .fa-twitter {background: #00abf0;}
+.share-box a .fa-google-plus {background: #d95232;}
+.share-box a .fa-pinterest {background: #ae181f;}
+.share-box a .fa-envelope-o {background: #666666;}
+.share-box a .fa-linkedin {background: #0077b5;}
+
+
+/*----------------------------------------------------------------
+----            Footer
+-----------------------------------------------------------------*/
+
+footer{
+     background: #212121;
+     width: 100%;
+     padding: 35px;
+     margin: 0;
+
+}
+footer .redes-sociales .footer-redes-sociales{
+     color:white;
+     font-size: 1.5em;
+     padding: 25px 10px;
+
+}
+footer .redes-sociales a{
+     text-decoration: none;
+     padding: 25px 9px;
+}
+footer .redes-sociales p{
+     color: #757575;
+     font-size: 1em;
+     padding: 0 20px 0 10px;
+}
+
+@media only screen and (min-width: 760px) {
+     .ir-arriba{
+          width: 70px;
+          height: 70px;
+          bottom:30px;
+          right: 30px;
+     }
+     .ir-arriba span{
+          margin-top: 18px;
+          margin-left: 16px;
+          font-size: 2.5em;
+     }
+     .share-box{
+          position: fixed;
+          width: 50px;
+          top:200px;
+          left: 0;
+          z-index: 100;
+          padding: 0;
+     }
+     .share-box a{
+          margin: 0;
+          width: 60px;
+     }
+
+     .share-box a .fa-facebook,
+     .share-box a .fa-twitter,
+     .share-box a .fa-google-plus,
+     .share-box a .fa-pinterest,
+     .share-box a .fa-envelope-o,
+     .share-box a .fa-linkedin{
+          width: 60px;
+     }
+     .share-box a .fa-facebook:hover,
+     .share-box a .fa-twitter:hover,
+     .share-box a .fa-google-plus:hover,
+     .share-box a .fa-pinterest:hover,
+     .share-box a .fa-envelope-o:hover,
+     .share-box a .fa-linkedin:hover{
+          background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+          padding: 10px 50px;
+     }
+}
