@@ -3,7 +3,6 @@ jQuery(document).ready(function($){
 		offset = 0.8;
 
 	//hide timeline blocks which are outside the viewport
-	hideBlocks(timelineBlocks, offset);
 
 	//on scolling, show/animate timeline blocks when enter the viewport
 	$(window).on('scroll', function(){
@@ -12,15 +11,9 @@ jQuery(document).ready(function($){
 			: window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset); });
 	});
 
-	function hideBlocks(blocks, offset) {
-		blocks.each(function(){
-			( $(this).offset().top > $(window).scrollTop()+$(window).height()*offset ) && $(this).find('.timeline-date, .timeline-content').addClass('is-hidden');
-		});
-	}
-
 	function showBlocks(blocks, offset) {
 		blocks.each(function(){
-			( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.timeline-date').hasClass('is-hidden') ) && $(this).find('.timeline-date, .timeline-content').removeClass('is-hidden').addClass('bounce-in');
+			( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.timeline-date').hasClass('is-hidden') ) && $(this).find('.timeline-date, .timeline-content').addClass('bounce-in');
 		});
 	}
 });
