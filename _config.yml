@@ -14,7 +14,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "oqueber.github.io" # the base hostname & protocol for your site
 permalink: /:title/
 
-
+google_analytics: UA-82888756-1
 #-------------------------------------------------------------------------------------------------------------------------
 #Espacio de trabajo -1-
 work-1-link: /blog
