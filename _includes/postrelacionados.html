@@ -1,47 +1,47 @@
+<section class="postRecientes">
+     <div class="contenedor">
 
-<section class="trabajos-portafolio postRelacionados">
-     <h1 class="title-home ">Articulos relacionados</h1>
-     <div class=" row beetween-xs col-xs">
+          <h1 class="title-home" style="font-size:2.5em">Ariculos Relacionados</h1>
+
+          <div class="row beetween-xs col-xs">
+
+               {% assign maxRelated = 3 %}
+               {% assign minCommonTags =  1 %}
+               {% assign maxRelatedCounter = 0 %}
+
+               {% for post in site.posts %}
+
+                   {% assign sameTagCount = 0 %}
+                   {% assign commonTags = '' %}
+
+                   {% for category in post.categories %}
+                     {% if post.url != page.url %}
+                       {% if page.categories contains category %}
+                         {% assign sameTagCount = sameTagCount | plus: 1 %}
+                         {% capture tagmarkup %} <span class="label label-default">{{ category }}</span> {% endcapture %}
+                         {% assign commonTags = commonTags | append: tagmarkup %}
+                       {% endif %}
+                     {% endif %}
+                   {% endfor %}
+                   {% if sameTagCount >= minCommonTags %}
+                   <div class="masRecientes col-xs-12 col-sm-4">
+                            <a href="{{ site.baseurl }}{{ post.url }}" target="_blank">
+                            <div class="img-blog">
+                                 <img style="max-width:100%;" src="{{ site.baseurl }}/img/{{ post.img }}" alt="" />
+                            </div>
+                            <div class="text-blog">
+                                 <p>{{ post.title }}</p>
+                            </div>
+                            </a>
+                   </div>
+                    {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+                    {% if maxRelatedCounter >= maxRelated %}
+                       {% break %}
+                    {% endif %}
+                   {% endif %}
+                 {% endfor %}
 
 
-          {% assign maxRelated = 3 %}
-          {% assign minCommonTags =  1 %}
-          {% assign maxRelatedCounter = 0 %}
-
-          {% for post in site.posts %}
-
-              {% assign sameTagCount = 0 %}
-              {% assign commonTags = '' %}
-
-              {% for category in post.categories %}
-                {% if post.url != page.url %}
-                  {% if page.categories contains category %}
-                    {% assign sameTagCount = sameTagCount | plus: 1 %}
-                    {% capture tagmarkup %} <span class="label label-default">{{ category }}</span> {% endcapture %}
-                    {% assign commonTags = commonTags | append: tagmarkup %}
-                  {% endif %}
-                {% endif %}
-              {% endfor %}
-              {% if sameTagCount >= minCommonTags %}
-              <div class="work col-xs-4">
-                  <a href="{{ site.baseurl }}{{ post.url }}" target="_blank">
-                       <div class="img-work">
-                            <img src="{{ site.baseurl }}{{page.img}}" alt="{{site.work-1-descriptionImagen}}" />
-                       </div>
-                       <div class="text-work">
-                            <p>{{ post.title }}</p>
-                       </div>
-
-                  </a>
-                 <p class="tags">Relacion con: <span >{{ commonTags }}</span></p>
-             </div>
-
-               {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-               {% if maxRelatedCounter >= maxRelated %}
-                  {% break %}
-               {% endif %}
-              {% endif %}
-
-            {% endfor %}
-
+          </div>
+     </div>
 </section>

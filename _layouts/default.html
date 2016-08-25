@@ -11,26 +11,30 @@
     <meta itemprop="description" name="description" content="{% if page.desc %}{{ page.desc | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Lato|Montserrat|Average' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="icon" href="{{ site.baseurl }}/img/icon.ico">
 
-     <link rel="icon" href="{{ site.baseurl }}/img/icon.ico">
+     <link href="https://fonts.googleapis.com/css?family=Bitter|Lato|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.min.js"></script>
+     <!-----
+
+------
+
+
+    <script id="dsq-count-scr" src="//oquebernavarro-github-com.disqus.com/count.js"></script>
+    ----->
 
 </head>
 
 <body>
-{% include htmlBase/header.html %}
 <div class="ir-arriba"><span class="fa fa-rocket "></span></div>
+{% include htmlBase/header.html %}
 
-    <div id="main" role="main">
       {{ content }}
-    </div>
 
-{% include htmlBase/footer.html %}
-     <script type="text/javascript" src="{{ site.baseurl }}/js/script-post.js"></script>
-     <script id="dsq-count-scr" src="//oquebernavarro-github-com.disqus.com/count.js" async></script>
+     <script type="text/javascript" src="{{ site.baseurl }}/js/script-main.js"></script>
+    {% include htmlBase/footer.html %}
     {% include analytics.html %}
   </body>
 </html>

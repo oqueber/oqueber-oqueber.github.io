@@ -9,12 +9,12 @@ description: Pequeña descripcion sobre quien soy.
        event.returnValue=false; // Para IE
 
           $("body,html").animate({
-               scrollTop: $(".imagenPresentacion").height() + $(".header").height()+"px"
+               scrollTop: $(".imagenPresentacion").height() + $("header").height() + 2 +"px"
           },300);
-          
+
        return false;
      });
 </script>
-{% include portafolio/header-portafolio.html %}
-{% include portafolio/timeline-portafolio.html %}
-{% include portafolio/trabajos-portafolio.html %}
+{% include portafolio/header.html %}
+{% include portafolio/timeline.html %}
+{% include portafolio/blog.html %}

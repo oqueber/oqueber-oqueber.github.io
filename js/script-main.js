@@ -1,10 +1,8 @@
 $(document).ready(function(){
 
-     $(".imagenPresentacion").css({"height":$(window).height()-$(".header").height()+"px"});
-
      $(".down").click(function(){
           $("body,html").animate({
-               scrollTop: $(".imagenPresentacion").height() + $(".header").height()+"px"
+               scrollTop: $(".imagenPresentacion").height() + $("header").height()+"px"
           },300);
      });
 

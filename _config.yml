@@ -1,41 +1,30 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+name: Oqueber Navarro
+title: Oqueber Navarro
+description: Sitio web personal
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://example.com" # the base hostname & protocol for your site
+permalink: /:title/
 
 gems: [jekyll-paginate]
 paginate: 9
 paginate_path: "/blog/page:num/"
 
-title: Your awesome title
-name: Oqueber Navarro
-# Short bio or description (displayed in the header)
-email: oqueber@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Hola soy oqueber
-# cuentanos sobre ti:
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "oqueber.github.io" # the base hostname & protocol for your site
-permalink: /:title/
-
-google_analytics: UA-82888756-1
-#-------------------------------------------------------------------------------------------------------------------------
-#Espacio de trabajo -1-
-work-1-link: /blog
-#-- La imagen debe de estar en la carpeta img y colocas el nombre y el tipo(.jpg o .png)
-work-1-nombreImagen: 1.jpg
-work-1-descriptionImagen: ejemlo de work1
-work-1-Titulo: Mi trabajo fue probar
-# Espacio de trabajo -2-
-work-2-link: /blog
-#-- La imagen debe de estar en la carpeta img y colocas el nombre y el tipo(.jpg o .png)
-work-2-nombreImagen: 2.jpg
-work-2-descriptionImagen: ejemlo de work2
-work-2-Titulo: Mi trabajo fue probar
-# Espacio de trabajo -3-
-work-3-link: /blog
-#-- La imagen debe de estar en la carpeta img y colocas el nombre y el tipo(.jpg o .png)
-work-3-nombreImagen: 3.jpg
-work-3-descriptionImagen: ejemlo de work3
-work-3-Titulo: Mi trabajo fue probar
-#-----------------------------------------------------------------------------------------------------------------------------
-# Includes an icon in the footer for each username you enter
+# Botones para el footer
 footer-links:
   dribbble:
   email: oqueer_2324@hotmai.com

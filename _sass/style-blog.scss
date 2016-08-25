@@ -1,134 +1,218 @@
-.contenedor-contenedor-posts{
-     margin:0;
-     padding:0;
-     background: #dcdcdc;
+.postRecientes{
+     background:#ffff00;
+     overflow:hidden;
+     text-align:center;
 }
-
-.contenedor-posts{
-     margin:0 auto;
-     padding:0;
-     padding-top:60px;
-     max-width:80%;
-
-}
-
-.contenedor-posts .row{
-     padding:0;
-     margin:0;
-}
-.contenedor-posts .insite-post .one-post{
-     width: 100%;
-     min-height: 320px;
-     margin:0 auto;
-     padding:10px;
+.masRecientes{
      position:relative;
-     display:inline-block;
+     margin-bottom:60px
+}
+.masRecientes p{
+     font-size:1.5em;
+     color:#000;
+
+}
+.contenedor-blog{
+     background-color: #f0f0f0;
+     padding-top: 50px;
+}.contenedor-inBlog{
+     background-color: #f0f0f0;
 }
 
-.contenedor-posts .insite-post .one-post .imagen-post{
-     margin:0 auto;
-     background: white;
-     box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.5);
-     transition:0.5s all;
-}
 
-.contenedor-posts .insite-post .one-post .imagen-post:hover{
-     background:#81c8ca;
+/*----------------------------------------------------------------
+----            Botones de new and prev
+-----------------------------------------------------------------*/
+.pagination {
+    text-align: center;
+    padding: 40px 0;
 }
-.contenedor-posts .insite-post .one-post .imagen-post img{
-     width:100%;
-     max-width:480px;
-     max-height:500px;
-     margin:0 auto;
+.pagination a {
+    padding: 10px;
+    background: white;
 }
-.contenedor-posts .insite-post .one-post .content-post {
-    padding: 15px;
-    min-height: 100px;
+.pagination em {
+    padding: 10px;
+    background: yellow;
 }
-.contenedor-posts .insite-post .one-post .content-post h1{
-     font-size: 1.5em;
-    font-weight: 400;
+.pagination span {
+    padding: 10px;
+    background: white;
 }
 /*----------------------------------------------------------------
-----            main del post
+----            Contenido del blog
 -----------------------------------------------------------------*/
-.on-main-post{
-     background: #fafafa;
+.title-blog{
+     font-size: 4em;
+    font-weight: 300;
+    border-bottom: 3px solid #545454;
+    margin: 22px auto;
+    color: #545454;
 }
-.on-main-post .row{
-     margin: 0;
+.post {
+    box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    background: white;
 }
-.on-main-post .row .title-post{
-     font-size: 3em;
-     margin: 30px auto;
-     max-width: 100%;
+.post-tittle {
+     font-size: 4em;
+     font-weight: 300;
      color: #545454;
+     text-align: left;
 }
 
-.on-main-post .on-content{
-     padding: 20px 0 40px 0;;
-}
-.on-main-post .on-content .text-blog h1,
-.on-main-post .on-content .text-blog h2,
-.on-main-post .on-content .text-blog h3{
-    font-family: "Lato",sans-serif;
-    line-height: 1.313em;
-    color: #545454;
+.post h2,
+.post h3,
+{
+     font-family: "Lato",sans-serif;
+     line-height: 1.313em;
+     color: #545454;
      font-size: 1.7em;
      margin: 1em;
 }
-.on-main-post .on-content .text-blog p{
-     color: rgba(0,0,0,0.8);
-     font-family: "Average",serif;
-     font-size: 21px;
-     line-height: 1.5em;
-     padding: 1em;
-     text-align: justify;
+.post p {
+     color: rgba(0, 0, 0, 0.8);
+         font-family: "Lato",serif;
+         font-size: 27px;
+         line-height: 1.5em;
+         padding: 1em;
+         text-align: justify;
 }
-.on-main-post .on-content img{
-     width: 100%;
-     margin: 20px auto;
-     border:1px solid orange;
+.post img{
+     max-width: 99%;
 }
 
 
 /*----------------------------------------------------------------
-----            Articulos relacionados
+----            botones para Compartir
 -----------------------------------------------------------------*/
-.postRelacionados{
-     margin: 20px 0;
+.share-box{
+     padding: 30px 0;
+     text-align: center;
 }
 
-.postRelacionados h1{
-     padding-top: 10px;
-     margin-bottom: 0;
+.share-box a{
+     display: inline-block;
+     color:#fff;
      font-size: 2em;
-     margin: 0 auto;
+     width: 55px;
+     height: 50px;
+     background: #000;
+     margin: 0;
+     box-shadow:0px 3px 0px #373c3c;
 }
-.postRelacionados .work{
-     padding: 20px 10px;
-}
-.postRelacionados .work .tags{
-     font-size: 0.5em;
-     font-style: italic;
-}
-.postRelacionados .work .tags span{
-     background: #607d8b;
-     padding: 2px;
+.share-box a .fa-facebook,
+.share-box a .fa-twitter,
+.share-box a .fa-google-plus,
+.share-box a .fa-pinterest,
+.share-box a .fa-envelope-o,
+.share-box a .fa-linkedin{
+     width: 100%;
+     height: 50px;
+     padding: 10px 0;
      color: white;
-     border-radius: 5px;
+     text-decoration: none;
+     -webkit-transition:all 500ms ease;
+     -o-transition:all 500ms ease;
+     transition:all 500ms ease
 }
-.postRelacionados .work .text-work p{
-     font-weight: bold;
+.share-box a .fa-facebook:hover,
+.share-box a .fa-twitter:hover,
+.share-box a .fa-google-plus:hover,
+.share-box a .fa-pinterest:hover,
+.share-box a .fa-envelope-o:hover,
+.share-box a .fa-linkedin:hover{
+     box-shadow:0px 0px 0px;
+	padding-top:7px;
 }
-.postRelacionados .work .img-work img{
-         margin:0;
-}
-@media only screen and (max-width: 760px) {
 
-     .postRelacionados .work{
-     font-size: 1em;
+.share-box a .fa-facebook {background:#3b5998; } /* Establecemos los colores de cada red social, aprovechando su class */
+.share-box a .fa-twitter {background: #00abf0;}
+.share-box a .fa-google-plus {background: #d95232;}
+.share-box a .fa-pinterest {background: #ae181f;}
+.share-box a .fa-envelope-o {background: #666666;}
+.share-box a .fa-linkedin {background: #0077b5;}
+
+
+
+@media only screen and (min-width: 1024px) {
+
+     .share-box{
+          position: fixed;
+          width: 60px;
+          top:100px;
+          right: 0;
+          z-index: 100;
+          padding: 0;
+     }
+     .share-box a{
+          margin: 0;
+          width: 60px;
      }
 
+     .share-box a .fa-facebook,
+     .share-box a .fa-twitter,
+     .share-box a .fa-google-plus,
+     .share-box a .fa-pinterest,
+     .share-box a .fa-envelope-o,
+     .share-box a .fa-linkedin{
+          width: 60px;
+     }
+     .share-box a .fa-facebook:hover,
+     .share-box a .fa-twitter:hover,
+     .share-box a .fa-google-plus:hover,
+     .share-box a .fa-pinterest:hover,
+     .share-box a .fa-envelope-o:hover,
+     .share-box a .fa-linkedin:hover{
+          background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+          /*  padding-right:50px; */
+     }
+}
+
+
+@media only screen and (max-width: 768px) {
+     .post-tittle {
+          font-size: 2.5em;
+     }
+     .post p {
+         font-size: 1.2em;
+
+     }
+
+}
+@media only screen and (max-width: 1024px) {
+
+     .postRelacionados{
+          display: block;
+     }
+     .contenedor-nav{
+          display: none;
+     }
+
+
+}
+
+@media only screen and (min-width: 1024px) {
+     .postRelacionados{
+          display: none;
+     }
+     .contenedor-nav{
+          display: block;
+     }
+     .masRecientes:hover .text-blog{
+          visibility: visible;
+          opacity:1;
+     }
+     .text-blog{
+          visibility: hidden;
+          position: absolute;
+          padding: 20px;
+          width: 96%;
+          height: 99%;
+          background: rgba(81, 45, 168, 0.5);
+          top: 0;
+          opacity:0;
+          transition: all 0.5s ease-out;
+     }
 
 }
