@@ -1,0 +1,82 @@
+---
+layout: default
+---
+<div class="contenedor-inBlog">
+
+     <div class="contenedor">
+
+     <div style="padding-top:20px;" class="blog row">
+          <div class="contenedor-posts col-xs-12 col-md-9">
+
+               <article class="post col-xs-12">
+                         <img style="max-width:100%;margin-top: 8px;" src="{{ site.baseurl }}/img/{{ page.img }}" alt="{{ page.img-description }}" />
+                         <div class="date start-xs">
+                          Written on {{ page.date | date: "%B %e, %Y" }}
+                         </div>
+                         <div class="content-post">
+                              <h1 class="title-blog">{{ page.title }}</h1>
+
+                              <div style="text-align:left" class="contenido-post">
+                              {{ content }}
+                              </div>
+                              {% include  compartir.html %}
+
+                              <div class="postRelacionados">
+                                   {% include postRelacionados.html %}
+                              </div>
+
+                              <div style="margin-top:50px;"class="comments">
+                                {% include disqus.html %}
+                              </div>
+                         </div>
+               </article>
+
+
+          </div>
+          <div style="background:#fff;width:100%;
+          min-height:400px; " class="contenedor-nav col-md-3">
+          {% assign maxRelated = 3 %}
+          {% assign minCommonTags =  1 %}
+          {% assign maxRelatedCounter = 0 %}
+
+          {% for post in site.posts %}
+
+              {% assign sameTagCount = 0 %}
+              {% assign commonTags = '' %}
+
+              {% for category in post.categories %}
+                {% if post.url != page.url %}
+                  {% if page.categories contains category %}
+                    {% assign sameTagCount = sameTagCount | plus: 1 %}
+                    {% capture tagmarkup %} <span class="label label-default">{{ category }}</span> {% endcapture %}
+                    {% assign commonTags = commonTags | append: tagmarkup %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+              {% if sameTagCount >= minCommonTags %}
+              <div style="width:100%;margin-bottom:30px">
+                       <a href="{{ site.baseurl }}{{ post.url }}" target="_blank">
+                       <div class="img-blog">
+                            <img style="max-width:100%;margin-top:8px;" src="{{ site.baseurl }}/img/{{ post.img }}" alt="" />
+                       </div>
+                       <div>
+                            <p style="color:#000">{{ post.title }}</p>
+                       </div>
+                       </a>
+              </div>
+
+               {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+               {% if maxRelatedCounter >= maxRelated %}
+                  {% break %}
+               {% endif %}
+              {% endif %}
+
+            {% endfor %}
+
+
+          </div>
+
+
+     </div>
+</div>
+</div>
