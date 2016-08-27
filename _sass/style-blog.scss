@@ -42,6 +42,9 @@
 /*----------------------------------------------------------------
 ----            Contenido del blog
 -----------------------------------------------------------------*/
+.content-post {
+    padding: 1em;
+}
 .title-blog{
      font-size: 4em;
     font-weight: 300;
@@ -55,10 +58,12 @@
     background: white;
 }
 .post-tittle {
-     font-size: 4em;
+     font-size: 3em;
      font-weight: 300;
      color: #545454;
      text-align: left;
+     padding-bottom: 10px;
+     border-bottom: 1px solid #525252;
 }
 
 .post h2,
@@ -75,7 +80,6 @@
          font-family: "Lato",serif;
          font-size: 27px;
          line-height: 1.5em;
-         padding: 1em;
          text-align: justify;
 }
 .post img{

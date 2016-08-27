@@ -20,7 +20,12 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://example.com" # the base hostname & protocol for your site
 permalink: /:title/
 
-gems: [jekyll-paginate]
+google_analytics: UA-82888756-1
+
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate
+
 paginate: 9
 paginate_path: "/blog/page:num/"
 

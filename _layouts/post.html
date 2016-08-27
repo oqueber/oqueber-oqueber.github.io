@@ -11,7 +11,7 @@ layout: default
                <article class="post col-xs-12">
                          <img style="max-width:100%;margin-top: 8px;" src="{{ site.baseurl }}/img/{{ page.img }}" alt="{{ page.img-description }}" />
                          <div class="date start-xs">
-                          Written on {{ page.date | date: "%B %e, %Y" }}
+                          Escrito el {{ page.date | date: "%B %e, %Y" }}
                          </div>
                          <div class="content-post">
                               <h1 class="title-blog">{{ page.title }}</h1>
@@ -33,45 +33,58 @@ layout: default
 
 
           </div>
-          <div style="background:#fff;width:100%;
+          <div style="padding:0;width:100%;
           min-height:400px; " class="contenedor-nav col-md-3">
-          {% assign maxRelated = 3 %}
-          {% assign minCommonTags =  1 %}
-          {% assign maxRelatedCounter = 0 %}
 
-          {% for post in site.posts %}
+          <div style="    box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.5);background:#fff;padding-bottom:10px;margin-bottom:20px;text-align:center" >
+               <h2 style="padding: 16px; border-bottom: 1px solid black;">Sigue leyendo</h2>
+               {% assign maxRelated = 3 %}
+               {% assign minCommonTags =  1 %}
+               {% assign maxRelatedCounter = 0 %}
 
-              {% assign sameTagCount = 0 %}
-              {% assign commonTags = '' %}
+               {% for post in site.posts %}
 
-              {% for category in post.categories %}
-                {% if post.url != page.url %}
-                  {% if page.categories contains category %}
-                    {% assign sameTagCount = sameTagCount | plus: 1 %}
-                    {% capture tagmarkup %} <span class="label label-default">{{ category }}</span> {% endcapture %}
-                    {% assign commonTags = commonTags | append: tagmarkup %}
-                  {% endif %}
-                {% endif %}
-              {% endfor %}
-              {% if sameTagCount >= minCommonTags %}
-              <div style="width:100%;margin-bottom:30px">
-                       <a href="{{ site.baseurl }}{{ post.url }}" target="_blank">
-                       <div class="img-blog">
-                            <img style="max-width:100%;margin-top:8px;" src="{{ site.baseurl }}/img/{{ post.img }}" alt="" />
-                       </div>
-                       <div>
-                            <p style="color:#000">{{ post.title }}</p>
-                       </div>
-                       </a>
-              </div>
+                   {% assign sameTagCount = 0 %}
+                   {% assign commonTags = '' %}
 
-               {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-               {% if maxRelatedCounter >= maxRelated %}
-                  {% break %}
-               {% endif %}
-              {% endif %}
+                   {% for category in post.categories %}
+                     {% if post.url != page.url %}
+                       {% if page.categories contains category %}
+                         {% assign sameTagCount = sameTagCount | plus: 1 %}
+                         {% capture tagmarkup %} <span class="label label-default">{{ category }}</span> {% endcapture %}
+                         {% assign commonTags = commonTags | append: tagmarkup %}
+                       {% endif %}
+                     {% endif %}
+                   {% endfor %}
+                   {% if sameTagCount >= minCommonTags %}
+                   <div style="padding:0 8px;width:100%;margin-bottom:30px">
+                            <a href="{{ site.baseurl }}{{ post.url }}" target="_blank">
+                            <div class="img-blog">
+                                 <img style="max-width:100%;margin-top:8px;" src="{{ site.baseurl }}/img/{{ post.img }}" alt="" />
+                            </div>
+                            <div>
+                                 <p style="color:#000">{{ post.title }}</p>
+                            </div>
+                            </a>
+                   </div>
 
-            {% endfor %}
+                    {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+                    {% if maxRelatedCounter >= maxRelated %}
+                       {% break %}
+                    {% endif %}
+                   {% endif %}
+
+                 {% endfor %}
+          </div>
+
+            <div style="    box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.5);background:#fff;margin-bottom:50px;background:#fafafa;text-align:center" class="createdBy">
+                 <h2 style="padding: 16px 0; border-bottom: 1px solid black;" >Acerca del autor</h2>
+                 <div style="padding: 1em;" class="acercaDeMi">
+                      <img  style="margin-top:10px;width:200px;height:200px;background:yellow;border-radius:100px" src="{{ base.url }}/img/sobreAutor.jpg" alt="">
+                      <a href="{{ base.url }}/"><h2 style="color: #6d0120;padding: 5px 0;border-bottom: 1px dashed;margin-bottom: 10px;">Oqueber Navarro</h2></a>
+                      <p style="font-size: 17px;line-height: 1.5em;">Estudiante de Tecnología Electrónica en la Universidad Simón Bolívar. Apasionado por la robotica, donde conbino el hardware y desalloro Web</p>
+                 </div>
+            </div>
 
 
           </div>
