@@ -42,6 +42,9 @@
 /*----------------------------------------------------------------
 ----            Contenido del blog
 -----------------------------------------------------------------*/
+.title-nav{
+     font-size: 3em;
+}
 .content-post {
     padding: 1em;
 }
@@ -60,7 +63,7 @@
 .post-tittle {
      font-size: 3em;
      font-weight: 300;
-     color: #545454;
+     color: #000;
      text-align: left;
      padding-bottom: 10px;
      border-bottom: 1px solid #525252;
@@ -73,10 +76,10 @@
      line-height: 1.313em;
      color: #545454;
      font-size: 1.7em;
-     margin: 1em;
+     margin: 1em 0;
 }
 .post p {
-     color: rgba(0, 0, 0, 0.8);
+     color: rgba(0, 0, 0, 0.7);
          font-family: "Lato",serif;
          font-size: 27px;
          line-height: 1.5em;
@@ -174,49 +177,52 @@
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1020px) {
      .post-tittle {
-          font-size: 2.5em;
+          font-size: 1.7em;
      }
      .post p {
          font-size: 1.2em;
 
      }
+     .title-blog{
+          font-size: 3em;
+     }
+     .contenedor-posts{
+          padding: 0;
+     }
+     .post{
+          padding: 0;
+     }
+     .contenedor-nav .title-nav{
+          padding: 10px 0;
+          border-bottom: 0;
+          font-size: 2em;
+          font-weight: 400;
+          color:#353535;
+     }
 
 }
-@media only screen and (max-width: 1024px) {
 
-     .postRelacionados{
-          display: block;
-     }
-     .contenedor-nav{
-          display: none;
-     }
-
-
-}
 
 @media only screen and (min-width: 1024px) {
+     .contenedor-nav .title-nav{
+          padding: 16px 0;
+          border-bottom: 1px solid black;
+          font-size: 2em;
+          font-weight: 400;
+          color:#353535;
+     }
+     .masRecientes {
+         margin: 15px 0;
+     }
+     .postRecientes{
+           background:#fff;
+           padding-bottom: 10px;
+     }
      .postRelacionados{
-          display: none;
+          box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.5);
+          margin-bottom:20px;
+          text-align:center;
      }
-     .contenedor-nav{
-          display: block;
-     }
-     .masRecientes:hover .text-blog{
-          visibility: visible;
-          opacity:1;
-     }
-     .text-blog{
-          visibility: hidden;
-          position: absolute;
-          padding: 20px;
-          width: 96%;
-          height: 99%;
-          background: rgba(81, 45, 168, 0.5);
-          top: 0;
-          opacity:0;
-          transition: all 0.5s ease-out;
-     }
-
 }
