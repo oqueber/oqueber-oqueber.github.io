@@ -4,6 +4,7 @@ title: Oqueber Navarro
 description: Sito web personal, donde comparto mis inventos sobre robotica, arduino, programascion y mas.
 author: Oqueber Navarro
 url: "http://oqueber.github.io" # the base hostname & protocol for your site
+baseurl: http://oqueber.github.io
 permalink: /:title/
 
 google_analytics: UA-82888756-1
