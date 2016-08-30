@@ -22,9 +22,7 @@ permalink: /:title/
 
 google_analytics: UA-82888756-1
 
-gems:
-  - jekyll-sitemap
-  - jekyll-paginate
+gems: [jekyll-sitemap,jekyll-paginate, jekyll-seo-tag]
 
 paginate: 9
 paginate_path: "/blog/page:num/"
