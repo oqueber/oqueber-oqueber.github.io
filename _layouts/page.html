@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<article class="page">
+
+
+{% if page.adsenseQuitar != 0 %}
+     {% include adsense-page.html %}
+{% endif %}
+
+  <div class="entry">
+    {{ content }}
+  </div>
+</article>

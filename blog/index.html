@@ -1,0 +1,77 @@
+---
+layout: page
+adsenseQuitar: 0
+---
+
+<div class="contenedor-blog">
+
+     <div class="contenedor">
+
+     <div class="blog row">
+          <div class="contenedor-posts col-xs-12 col-md-9">
+               <div class="row center-xs between-sm">
+               {% for post in paginator.posts %}
+
+               <article class="post col-xs-12">
+                    <a href="{{ site.baseurl }}{{ post.url }}">
+                         <img style="max-width:100%;margin-top: 8px;" src="{{ site.baseurl }}/img/{{ post.img }}" alt="{{ post.img-description }}" />
+                         <div class="content-post">
+                              <h1 class="post-tittle">{{ post.title }}</h1>
+                              <p>{{ post.description }}</p>
+                         </div>
+                    </a>
+               </article>
+
+               {% endfor %}
+               </div>
+          </div>
+          <div style="padding:0;width:100%;
+          min-height:400px" class="contenedor-nav col-md-3">
+
+               <div style="background:#fff;text-align: center;padding-bottom:40px">
+                    <h1 style="font-size:2em;padding-top: 20px; border-bottom: 1px solid black;">Archivos</h1>
+                    {% for post in site.posts %}
+                         {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
+                         {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+                         {% if month != nmonth %}
+                    {% if forloop.index != 1 %}
+               </div>
+                    {% endif %}
+                         <h2 style="font-size:1.8em;padding-top: 20px;">{{ post.date | date: '%B %Y' }}</h2>
+               <div>
+                    {% endif %}
+                    <p style="font-size:1em;padding:3px 0;"><a href="{{ post.url }}">{{ post.title }}</a></p>
+                    {% endfor %}
+               </div>
+          </div>
+     </div>
+
+     {% if paginator.total_pages > 1 %}
+     <div class="pagination">
+       {% if paginator.previous_page %}
+         <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+       {% else %}
+         <span>&laquo; Prev</span>
+       {% endif %}
+
+       {% for page in (1..paginator.total_pages) %}
+         {% if page == paginator.page %}
+           <em>{{ page }}</em>
+         {% elsif page == 1 %}
+           <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+         {% else %}
+           <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+         {% endif %}
+       {% endfor %}
+
+       {% if paginator.next_page %}
+         <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+       {% else %}
+         <span>Next &raquo;</span>
+       {% endif %}
+     </div>
+     {% endif %}
+     </div>
+
+
+</div>
