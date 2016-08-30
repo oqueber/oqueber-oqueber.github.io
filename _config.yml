@@ -1,0 +1,30 @@
+
+name: Oqueber Navarro
+title: Oqueber Navarro
+description: Sito web personal, donde comparto mis inventos sobre robotica, arduino, programascion y mas.
+author: Oqueber Navarro
+url: "http://oqueber.github.io" # the base hostname & protocol for your site
+permalink: /:title/
+
+google_analytics: UA-82888756-1
+
+gems: [jekyll-sitemap, jekyll-paginate]
+
+paginate: 9
+paginate_path: "/blog/page:num/"
+
+# Botones para el footer
+footer-links:
+  dribbble:
+  email: oqueer_2324@hotmai.com
+  facebook: oqueber.navarro
+  github: oqueber
+  instagram:
+  linkedin:
+  pinterest:
+  twitter: oqueber_n
+  youtube: # channel/<your_long_string> or user/<user-name>
+
+# Build settings
+markdown: kramdown
+theme: minima
