@@ -4,6 +4,9 @@
      text-align:center;
 
 }
+strong{
+     font-weight: bold;
+}
 .masRecientes{
      position:relative;
      margin-bottom:60px
@@ -76,15 +79,29 @@
      font-family: "Lato",sans-serif;
      line-height: 1.313em;
      color: #545454;
-     font-size: 1.7em;
+     font-size: 2em;
      margin: 1em 0;
+}
+.post img{
+     margin: 40px 0;
 }
 .post p {
      color: rgba(0, 0, 0, 0.7);
          font-family: "Lato",serif;
-         font-size: 27px;
+         font-size: 20px;
          line-height: 1.5em;
          text-align: justify;
+         margin: 20px 0;
+}
+.post li{
+     color: rgba(0, 0, 0, 0.7);
+     font-size: 20px;
+     line-height: 1.5em;
+     text-align: justify;
+     margin: 20px 0;
+     padding: 30px;
+     font-weight: bold;
+     list-style: none;
 }
 .post img{
      max-width: 99%;
