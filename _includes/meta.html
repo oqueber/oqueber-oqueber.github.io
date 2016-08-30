@@ -17,8 +17,8 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta property="og:url" content="http://oqueber.github.io/{{ post.url }}">
-    <meta property="og:image" content="http://oqueber.github.io/img/{{ post.image }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}/img/{{ page.img }}" />
     <meta property="og:site_name" content="Oqueber Navarro">
     <meta property="article:publisher" content="http://oqueber.github.io" />
     <meta property="article:author" content="https://www.facebook.com/oqueber.navarro" />
@@ -28,6 +28,6 @@
 
      <meta name="twitter:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
      <meta name="twitter:description" content="{% if page.desc %}{{ page.desc }}{% else %}{{ site.description }}{% endif %}">
-     <meta name="twitter:site" content="http://oqueber.github.io" />
+     <meta name="twitter:site" content="@oqueber_n" />
      <meta name="twitter:creator" content="@oqueber_n">
      <meta name="twitter:card" content="summary">
