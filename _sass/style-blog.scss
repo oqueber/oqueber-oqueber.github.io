@@ -148,7 +148,7 @@ strong{
 .share-box a .fa-envelope-o:hover,
 .share-box a .fa-linkedin:hover{
      box-shadow:0px 0px 0px;
-	padding-top:7px;
+	padding: 10px 30px;
 }
 
 .share-box a .fa-facebook {background:#3b5998; } /* Establecemos los colores de cada red social, aprovechando su class */
@@ -164,9 +164,9 @@ strong{
 
      .share-box{
           position: fixed;
-          width: 60px;
-          top:100px;
-          right: 0;
+          width: 50px;
+          top:200px;
+          left: 0;
           z-index: 100;
           padding: 0;
      }
@@ -190,7 +190,7 @@ strong{
      .share-box a .fa-envelope-o:hover,
      .share-box a .fa-linkedin:hover{
           background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
-          /*  padding-right:50px; */
+          padding: 10px 50px;
      }
 }
 

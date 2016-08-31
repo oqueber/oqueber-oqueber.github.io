@@ -17,7 +17,7 @@ La resistencia se mide en **ohmios**. Un conductor tiene la resistencia de un oh
 
 La resistencia se identifica con el símbolo de la figura a continuación ( Ω ) en los circuitos en vez de la palabra ohmios, se utiliza la letra griega omega. Por ejemplo, una resistencia de 100ohmios simplemente se escribe 100 Ω.
 
-<p style="font-size:2em; text-align:center; padding:20px 0;">1Ω = 1 v/a</p>
+<p style="font-size:2em; text-align:center; padding:20px 0">1Ω = 1 v/a</p>
 
 <div style="text-align:center;border:6px dashed red; padding:0 15px">
 
@@ -28,10 +28,3 @@ La resistencia se identifica con el símbolo de la figura a continuación ( Ω 
      <img style="margin:0 auto" src="{{ site.baseurl }}/img/resistencia-electrica.jpg" alt="resistencia-electica"/>
 
 </div>
-
-
-----------
-
-{% include adsense-post.html %}
-
----------

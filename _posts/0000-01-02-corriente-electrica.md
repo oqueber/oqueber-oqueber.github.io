@@ -28,7 +28,7 @@ Para tener corriente eléctrica debe de existir una diferencia de potencial.
 
 Si queremos indicar el caudal de agua que pasa por una cañería lo hacemos en términos de litros por segundo, es decir, por el número de litros que pasa en un segundo. Asi en la electricidad, si nos detenemos en cierto punto de un circuito y observamos imaginariamente el número de electrones que pasa en un segundo, habremos descubierto una unidad práctica para expresar la intensidad de corriente. Esa unidad de llama amperio y se mide en culombios, el amperio representa el paso de un culombio de electricidad en el tiempo de 1 segundo a través de un circuito. En otras palabras el movimientos de 6.28x10^18 electrones por segundo.
 
-<p style="font-size:2em; text-align:center; padding:20px 0;">1A = 1 C/S</p>
+<p style="font-size:2em; text-align:center; padding:20px 0">1A = 1 C/S</p>
 
 <div style="text-align:center;border:6px dashed red; padding:0 15px">
 
@@ -43,15 +43,6 @@ Si queremos indicar el caudal de agua que pasa por una cañería lo hacemos en t
      <img style="margin:0 auto" src="{{ site.baseurl }}/img/corriente/corriente-real.jpg" alt="direccion de corriente real"/>
 <p>
      Ambos concepto son válido porque la corriente eléctrica es producida por el impulso de energía que se transfiere de electrón a electrón y esto se le llama corriente eléctrica.Por lo tanto indiferentemente la convención que utilices no afecta el funcionamiento del circuito.
-     </p>
+</p>
      <img src="{{ site.baseurl }}/img/corriente/corriente-electrica.gif" alt="corriente electrica"/>
-</div>'
-
-
-
-
-----------
-
-{% include adsense-post.html %}
-
----------
+</div>
