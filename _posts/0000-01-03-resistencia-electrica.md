@@ -1,11 +1,13 @@
 ---
 layout: post
-title: ¿Que es la resistencia electrica?
-description: En los circuitos eléctricos se utilizan alambres, terminales, contactos móviles y otras partes mecánicas que tienen la propiedad natural de oponerse al paso de la corriente. Sin embargo, hay otros dispositivos que tienen la resistencia suficiente como para controlar el paso de la corriente a la proporción requerida en un circuito. A estos componentes se le llama resistores o simplemente resistencia
+title: ¿Que es la resistencia electica?
+description: En los circuitos eléctricos se utilizan alambres, terminales, contactos móviles y otras partes mecánicas que tienen la propiedad natural de oponerse al paso de la corriente. Sin embargo, hay otros dispositivos que tienen la resistencia suficiente como para controlar el paso de la corriente a la proporción requerida en un circuito. A estos componentes se le llama resistores o simplemente resistencia.
 img: post3.jpg
 categories:  [basico,Ley-de-Ohm]
+fecha: 2016-08-30
 adsenseQuitar: 0
 ---
+
 
 En los circuitos eléctricos se utilizan alambres, terminales, contactos móviles y otras partes mecánicas que tienen la propiedad natural de oponerse al paso de la corriente. Sin embargo, hay otros dispositivos que tienen la resistencia suficiente como para controlar el paso de la corriente a la proporción requerida en un circuito. A estos componentes se le llama **resistores** o simplemente **resistencia**.
 
@@ -13,7 +15,7 @@ En el primero caso, se dice que los **aislantes** tienen **resistencia muy eleva
 
 La resistencia se mide en **ohmios**. Un conductor tiene la resistencia de un ohmio cuando permite el flujo de 1 amperio. Bajo la influencia de 1 voltio.
 
-La resistencia se identifica con el símbolo de la figura a continuación ( Ω ) en los circuitos en vez de la palabra ohmios, se utiliza la letra griega omega. Por ejemplo, una resistencia de 100ohmios simplemente se escribe 100 Ω
+La resistencia se identifica con el símbolo de la figura a continuación ( Ω ) en los circuitos en vez de la palabra ohmios, se utiliza la letra griega omega. Por ejemplo, una resistencia de 100ohmios simplemente se escribe 100 Ω.
 
 <p style="font-size:2em; text-align:center; padding:20px 0;">1Ω = 1 v/a</p>
 
@@ -25,9 +27,7 @@ La resistencia se identifica con el símbolo de la figura a continuación ( Ω 
 
      <img style="margin:0 auto" src="{{ site.baseurl }}/img/resistencia-electrica.jpg" alt="resistencia-electica"/>
 
-</div>'
-
-
+</div>
 
 
 ----------

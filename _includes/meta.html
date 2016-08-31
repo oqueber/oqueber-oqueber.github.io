@@ -6,16 +6,16 @@
     <meta name="description" content="{{ page.description }}">
     <meta name="author" content="{{ site.name }}" />
 
-    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:image" content="{{ site.url }}/img/{{ page.img }}" />
+    <meta property="og:locale" content="es_ES">
     <meta property="og:site_name" content="Oqueber Navarro">
     <meta property="article:publisher" content="http://oqueber.github.io" />
     <meta property="article:author" content="https://www.facebook.com/oqueber.navarro" />
-    <meta property="article:published_time" content="{{ page.date }}" />
-    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="article:published_time" content="{{ page.fecha }}" />
     <meta name="twitter:card" content="summary_large_image"/>
 
      <meta name="twitter:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">

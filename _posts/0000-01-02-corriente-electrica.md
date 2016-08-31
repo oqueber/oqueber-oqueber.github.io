@@ -4,6 +4,7 @@ title: ¿Que es la corriente electrica?
 description: La corriente eletrica es el flujo de electrones que pasar en un segundo por una determinada area. Pero ¿De que sirve esto?
 img: post1.jpg
 categories:  [basico,Ley-de-Ohm]
+fecha: 2016-08-30
 adsenseQuitar: 0
 ---
 
