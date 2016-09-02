@@ -1,0 +1,12 @@
+<url>
+     <loc>http://oqueber.github.io{{site.baseurl}}{{include.entry.url}}</loc>
+
+     {% if include.entry.priority %}
+     <priority>{{ include.entry.priority }}</priority>
+     {% endif %}
+
+     {% if include.entry.fecha %}
+     <lastmod>{{ include.entry.fecha }}</lastmod>
+     {% endif %}
+
+</url>
