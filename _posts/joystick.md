@@ -1,0 +1,67 @@
+---
+layout: post
+title: ¿Que es la jostyck?
+description: El joystick es una palanca de movimiento, este dispositivo es un sensor que nos ayuda a convertir un movimiento físico, en una acción eléctrica. Por ejemplo en los videojuegos se utiliza para mover el personaje del juego. En el mundo de la electrónica tiene tantas funciones tu les quieras dar, pero el mas usado es para darle dirección a los motores de los robots.
+img: post-joystick.jpg
+categories:  [basico,joystick,sensores]
+fecha: 2016-09-22
+adsenseQuitar: 0
+---
+
+
+## ¿Que es el joystick?
+
+El joystick es una palanca de movimiento, este dispositivo es un sensor que nos ayuda a convertir un movimiento físico, en una acción eléctrica. Por ejemplo en los videojuegos se utiliza para mover el personaje del juego. En el mundo de la electrónica tiene tantas funciones tu les quieras dar, pero el mas usado es para darle dirección a los motores de los robots.
+
+Su **funcionamiento** interno es muy sencillo, consiste en dos potenciometro y un botón. Cada eje de coordenada es un potenciómetro independiente y la coordenadas cartesianas se calculan con la caída de voltaje que arroja la caida de tension que se muestra en la señal.
+
+
+![potenciometro]({{ site.baseurl }}/img/joystick/potenciometro.jpg)
+
+-- Mientras más te cercas de la entrada. Mas voltaje tendras en la señal. 
+-- Mientras más te cerca a la tierra(GND), menos voltaje tendrás en la señal y con esos valores vas jugando.
+
+
+![potenciometro]({{ site.baseurl }}/img/joystick/potenciometro2.jpg)
+
+*Colocamos gnd a la tierra del arduino.
+*Colocamos donde dice 5V a los 5 voltios de el arduino.
+*Donde dice VRx significa voltaje variable en el eje x y lo conectaremos a A0 que significa pin 0 del puerto analogo del arduino.
+*Donde dice VRy significa voltaje variable en el eje y y lo conectaremos a A1 que significa pin 1 del puerto analogo del arduino.
+*SW significa switch osea el boton cualquiera y lo conectamos al pin digital 4.
+
+## El código:
+----------------
+
+
+
+//---      Oqueber Navarro
+//---    Codigo del joystick
+
+
+     const int eje_x = A0;
+     const int eje_y = A1;
+     const int boton = 4;
+
+    void setup(){
+   
+      pinMode(boton,INPUT);
+      digitalWrite(boton, HIGH);
+      Serial.begin(9600);
+      
+    }
+
+    void loop(){
+     
+      Serial.print("X:  ");
+      Serial.println(analogRead(eje_x),DEC);
+
+      Serial.print("Y:  ");
+      Serial.println(analogRead(eje_y),DEC);
+
+      Serial.print("boton:  ");
+      Serial.println(digitalRead(boton));
+     
+      delay(500);
+     }
+
